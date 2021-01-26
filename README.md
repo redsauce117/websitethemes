@@ -6,7 +6,7 @@ To use custom themes download one of the following for your browser:
 Then click the "Install the usercss" link on one of the themes below.
 
 ## e621/e926
-Description: Modernizes, fixes, and improves the look of the website.
+**Description:** Modernizes, fixes, and improves the look of the website.
 
 **Note:** This replaces the "Hotdog" theme with a custom (better looking) theme.
 
