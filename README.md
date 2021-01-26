@@ -5,6 +5,8 @@ To use custom themes download one of the following for your browser:
 
 Then click the "Install the usercss" link on one of the themes below.
 
+**[IMPORTANT] To edit theme settings, click on the extention icon and then click on the gear next to the theme you're using.**
+
 ## e621/e926
 **Description:** Modernizes, fixes, and improves the look of the website.
 
