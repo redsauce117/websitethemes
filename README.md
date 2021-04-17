@@ -13,3 +13,8 @@ Then click the "Install the usercss" link on one of the themes below.
 **Note:** This replaces the "Hotdog" theme with a custom (better looking) theme.
 
 📦 [Install the usercss for e621/e926](https://raw.githubusercontent.com/redsauce117/websitethemes/main/e621-e926.user.css)
+
+## Steam Quality of Life
+**Description:** Modernizes, fixes, and improves the look of the website.
+
+📦 [Install the usercss for Steam Quality of Life](https://github.com/redsauce117/websitethemes/raw/main/steam.user.css)
