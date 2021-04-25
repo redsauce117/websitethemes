@@ -3,7 +3,7 @@
 @namespace      SauceyThemes
 @homepageURL    https://github.com/redsauce117/websitethemes/
 @updateURL      https://raw.githubusercontent.com/redsauce117/websitethemes/main/steam.user.css
-@version        1.0.1
+@version        1.0.2
 @description    A quality of life update to Steam.
 @author         Saucey#5719
 @preprocessor stylus
@@ -11,8 +11,23 @@
 @var checkbox newheader "Enable the new Header and dropdowns" 1
 @var checkbox adblock "Block Ads on Page" 0
 ==/UserStyle== */
-
 @-moz-document domain("steampowered.com"),domain("steamcommunity.com") {
+
+if scrollbar {
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #1b2838;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #434953;
+        border-radius: 20px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #7b8392;
+    }
+}
 
 if newheader {
     /* Header */
@@ -23,13 +38,16 @@ if newheader {
         border: 1px solid rgba(0,0,0,.4);
         box-shadow: 2px 3px 3px 0 rgba(0,0,0,.3);
     }
+    div#global_actions .global_header_toggle_button {
+        background: rgba(0,0,0,.3);
+    }
     div#global_header .menuitem {
         padding-top: 0;
         margin-top: 45px;
     }
     div#global_header {
         background: linear-gradient(90deg, rgba(40, 68, 99, 1) 11.38%, rgba(35, 73, 108, 1) 25.23%, rgb(10, 21, 72) 100%) !important;
-        box-shadow: 0 -10px 10px -5px inset  rgba(0,0,0,.3);
+        box-shadow: 0 -10px 10px -5px inset rgba(0,0,0,.3);
     }
     div#global_header .content {
         background: transparent !important;
@@ -47,30 +65,26 @@ if newheader {
         border-radius: 7px;
         border: none;
     }
+    .popup_menu_twocol > .popup_menu.leftborder, .popup_menu_twocol_new > .popup_menu.leftborder {
+        border-left: 1px solid #fff;
+    }
+    #global_action_menu .popup_menu a.popup_menu_item:hover, .search_suggest .match:hover {
+        background: linear-gradient(90deg, rgba(33, 162, 255, 0.25) 0%, rgba(33, 162, 255, 0.15) 50%, rgba(50, 50, 51, 0) 100%);
+    }
+    .search_suggest .match:nth-of-type(1) {
+        border: none;
+    }
+    div#language_dropdown {
+        left: -304px!important;
+    }
 }
 
 if adblock {
-    .home_page_takeover_link, .page_background_holder, .valveindex_banner, .home_index_banner, .home_page_gutter_block:nth-of-type(1) .gutter_header:nth-of-type(1), a.gutter_giftcard.gutter_item {
+    .home_page_takeover_link, .page_background_holder, .valveindex_banner, .home_index_banner, .home_page_gutter_block:nth-of-type(1) .gutter_header:nth-of-type(1), a.gutter_giftcard.gutter_item, .home_page_content.takeunder {
         display: none!important;
     }
     .home_page_gutter{
         top: 0!important;
-    }
-}
-
-if scrollbar {
-    ::-webkit-scrollbar {
-        width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-        background: #1b2838;
-    }
-    ::-webkit-scrollbar-thumb {
-        background: #434953;
-        border-radius: 20px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-        background: #7b8392;
     }
 }
 
@@ -169,26 +183,6 @@ div#review_create {
 }
 
 /* App page */
-.rightcol .glance_ctn {
-    background: rgba(0,0,0,.4);
-    padding: 10px;
-}
-.rightcol .glance_ctn .game_header_image_ctn img.game_header_image_full {
-    width: 305px;
-    box-shadow: 0 10px 5px -5px rgba(0,0,0,.3);
-}
-/*
-.queue_overflow_ctn .queue_ctn {
-    background: none;
-    margin-top: -70px;
-}
-.queue_overflow_ctn .queue_ctn div#add_to_wishlist_area {
-    margin-left: -13px;
-}
-.queue_overflow_ctn .queue_ctn .btnv6_blue_hoverfade.btn_medium.right {
-    margin-right: 16px;
-}
-*/
 .leftcol.game_description_column .game_area_description {
     background: -moz-linear-gradient(left, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%);
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.2)), color-stop(100%,rgba(0,0,0,0.5)));
