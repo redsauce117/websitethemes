@@ -12,6 +12,8 @@ Then click the "Install the usercss" link on one of the themes below.
 
 📦 [Install the usercss for Roblox Quality of Life + Theme customizer](https://github.com/redsauce117/websitethemes/raw/main/roblox.user.css)
 
+![Roblox Theme Preview](https://i.imgur.com/kT4bqHD.png)
+
 ## Steam Quality of Life
 **Description:** Modernizes, fixes, and improves the look of the website.
 
