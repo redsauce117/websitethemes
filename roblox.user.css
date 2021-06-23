@@ -3,7 +3,7 @@
 @namespace      SauceyThemes
 @homepageURL    https://github.com/redsauce117/websitethemes/
 @updateURL      https://raw.githubusercontent.com/redsauce117/websitethemes/main/roblox.user.css
-@version        20210502.1.0
+@version        20210623.1.1
 @description    A quality of life update to Roblox. (I feel it works best to use dark images on Dark mode and light images on Light mode)
 @author         Saucey#5719
 @preprocessor stylus
@@ -96,12 +96,10 @@ if theme {
     }
     /* Body */
     .light-theme {
-        background: BckGround no-repeat center fixed #f2f4f5;
-        background-size: BGZoom;
+        background: BckGround no-repeat center/BGZoom fixed #f2f4f5;
     }
     .dark-theme {
-        background: BckGround no-repeat center fixed #232527;
-        background-size: BGZoom;
+        background: BckGround no-repeat center/BGZoom fixed #232527;
     }
     /* Page Loading */
     .dark-theme .shimmer, .dark-theme .shimmer-lines .shimmer-line, .shimmer-lines .dark-theme .shimmer-line {
@@ -133,8 +131,7 @@ if theme {
         padding: 15px;
     }
     .dark-theme .rbx-header, .dark-theme .rbx-left-col {
-        background: BckGround no-repeat center fixed #232527;
-        background-size: BGZoom;
+        background: BckGround no-repeat center/BGZoom fixed #232527;
         border: none!important;
     }
     .rbx-header {
@@ -151,8 +148,7 @@ if theme {
         padding: 15px;
     }
     .light-theme .rbx-header, .light-theme .rbx-left-col {
-        background: BckGround no-repeat center fixed #f2f4f5;
-        background-size: BGZoom;
+        background: BckGround no-repeat center/BGZoom fixed #f2f4f5;
         border: none!important;
     }
     /* Profile page */
@@ -175,6 +171,14 @@ if theme {
     .game-tile-list {
         padding: 5px 0 0 10px;
         height: 240px;
+    }
+    .dark-theme #games-carousel-page .spacer {
+        background: BckGround no-repeat center/BGZoom fixed #232527;
+        box-shadow: inset 0 0 999px 0 rgba(0,0,0,.3);
+    }
+    .light-theme #games-carousel-page .spacer {
+        background: BckGround no-repeat center/BGZoom fixed #f2f4f5;
+        box-shadow: inset 0 0 999px 0 rgba(255,255,255,.3);
     }
     .dark-theme .scroller.disabled, .dark-theme .scroller.next:hover, .dark-theme .game-tile-list {
         background-color: rgba(0,0,0,.3);
@@ -312,10 +316,16 @@ if theme {
         background-color: rgba(0,0,0,.5);
         border: none;
     }
+    /* Section Content */
+    .dark-theme .section-content {
+        background-color: rgba(0,0,0,.5);
+    }
+    .light-theme .section-content {
+        background-color: rgba(255,255,255,.5);
+    }
     /* blog.roblox.com */
     .has-limit {
-        background: BckGround no-repeat center fixed #232527!important;
-        background-size: BGZoom;
+        background: BckGround no-repeat center/BGZoom fixed #232527!important;
     }
     .news-list ul {
         background: rgba(0,0,0,.3);
